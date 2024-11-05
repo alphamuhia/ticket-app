@@ -1,6 +1,5 @@
 // components/EventList.js
 import React, { useState, useEffect } from "react";
-// import { Link } from 'react-router-dom';
 import mod from "../images/mod.jpeg";
 import soiree from "../images/soiree.jpeg";
 import ripple from "../images/ripple.jpg";

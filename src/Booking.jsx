@@ -3,7 +3,7 @@ import Ticket from "./Ticket";
 import Checkout from "./Checkout";
 
 const Booking = () => {
-  const [tickets, setTickets] = useState([
+  const [tickets] = useState([
     {
       id: 1,
       name: "Avatar",

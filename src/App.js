@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./Components/Homepage";
 import EventList from "./Components/Eventlist";
 import Navbar from "./Components/Navbar";
-// import Booking from "./Booking";
+import Booking from "./Booking";
 
 function App() {
   return (
     <div className="App">
-      {/* <Booking /> */}
+      <Booking />
 
       <Router>
         <div className="min-h-screen bg-gray-100">
