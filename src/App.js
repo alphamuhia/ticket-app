@@ -1,13 +1,16 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './Components/Homepage';
-import EventList from './Components/Eventlist';
-import Navbar from './Components/Navbar'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./Components/Homepage";
+import EventList from "./Components/Eventlist";
+import Navbar from "./Components/Navbar";
+import Booking from "./Booking";
 
 function App() {
   return (
-    <Router>
+    <div className="App">
+      <Booking />
+
+      <Router>
         <div className="min-h-screen bg-gray-100">
           <Navbar />
           <Routes>
@@ -15,7 +18,8 @@ function App() {
             <Route path="/events" element={<EventList />} />
           </Routes>
         </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 export default App;
