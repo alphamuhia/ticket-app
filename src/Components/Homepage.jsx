@@ -1,9 +1,11 @@
 // HomePage
+// pages/HomePage.js
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactTyped } from 'react-typed';
 
 const HomePage = () => {
+    
   
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-blue-900">
@@ -21,7 +23,7 @@ const HomePage = () => {
                 <div className="relative z-10 text-center px-4">
                     <h1 className="text-6xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 to-purple-400">
-                            The Home of Events
+                            The Home of Movies
                         </span>
                     </h1>
 
@@ -29,9 +31,9 @@ const HomePage = () => {
                         <ReactTyped 
                             className="text-3xl md:text-4xl font-bold text-gray-200"
                             strings={[
-                                "Discover Amazing Events",
+                                "Discover Amazing Movies",
                                 "Experience Unforgettable Moments",
-                                "Join Exciting Gatherings"
+                                
                             ]}
                             typeSpeed={80}
                             backSpeed={60}
@@ -45,7 +47,7 @@ const HomePage = () => {
                             to="/events" 
                             className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-purple-900 focus:outline-none"
                         >
-                            <span>Browse Events</span>
+                            <span>Browse Movies</span>
                             <svg 
                                 className="w-5 h-5 ml-2 -mr-1 transition-transform duration-200 transform group-hover:translate-x-1"
                                 fill="none" 
@@ -74,7 +76,7 @@ const HomePage = () => {
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold mb-2">Real-time Updates</h3>
-                            <p className="text-gray-300">Get instant notifications about event changes and updates</p>
+                            <p className="text-gray-300">Get instant notifications about Movie changes and updates</p>
                         </div>
 
                         <div className="backdrop-blur-lg bg-white/10 p-6 rounded-2xl">
@@ -84,7 +86,7 @@ const HomePage = () => {
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold mb-2">Secure Booking</h3>
-                            <p className="text-gray-300">Safe and secure payment processing for all events</p>
+                            <p className="text-gray-300">Safe and secure payment processing for all Movies</p>
                         </div>
 
                         <div className="backdrop-blur-lg bg-white/10 p-6 rounded-2xl">
@@ -94,7 +96,7 @@ const HomePage = () => {
                                 </svg>
                             </div>
                             <h3 className="text-xl font-bold mb-2">Community Driven</h3>
-                            <p className="text-gray-300">Join a vibrant community of event enthusiasts</p>
+                            <p className="text-gray-300">Join a vibrant community Movie enthusiasts</p>
                         </div>
                     </div>
                 </div>
