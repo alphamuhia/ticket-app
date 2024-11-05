@@ -17,7 +17,9 @@ function Ticket({ ticket, handleBook }) {
       />
       <h3 className="text-lg font-semibold">{ticket.name}</h3>
       <p className="text-sm">Theater: {ticket.theater}</p>
-      <p className="text-sm">Price: ${(ticket.price / 100).toFixed(2)}</p>
+      <p className="text-sm font-semibold">
+        Price: Ksh {ticket.price.toFixed(2)}
+      </p>
       <button
         onClick={handleBooking}
         disabled={isBooked}

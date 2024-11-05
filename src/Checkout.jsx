@@ -17,7 +17,7 @@ const Checkout = ({ cart, handleConfirm, handleRemoveFromCart }) => {
                 className="mb-2 flex justify-between items-center"
               >
                 <span>
-                  {ticket.name} - ${(ticket.price / 100).toFixed(2)}
+                  {ticket.name} - Ksh {ticket.price.toFixed(2)}
                 </span>
                 <button
                   onClick={() => handleRemoveFromCart(ticket.id)}
@@ -29,7 +29,7 @@ const Checkout = ({ cart, handleConfirm, handleRemoveFromCart }) => {
             ))}
           </ul>
           <div className="mt-2 font-bold">
-            Total: ${(totalPrice / 100).toFixed(2)}
+            Total: Ksh {(totalPrice / 100).toFixed(2)}
           </div>
           <button
             onClick={handleConfirm}

@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const UserProfile = ({ user }) => {
   const [profile, setProfile] = useState(user);
 
   const handleCancelBooking = (bookingId) => {
-    // Logic to cancel booking
     alert(`Booking ${bookingId} canceled.`);
   };
 
@@ -37,11 +36,13 @@ const UserProfile = ({ user }) => {
 
       <h3>Past Bookings</h3>
       <ul>
-        {user.bookings.map(booking => (
+        {user.bookings.map((booking) => (
           <li key={booking.id}>
             {booking.eventName} - {booking.date}
             {booking.upcoming && (
-              <button onClick={() => handleCancelBooking(booking.id)}>Cancel Booking</button>
+              <button onClick={() => handleCancelBooking(booking.id)}>
+                Cancel Booking
+              </button>
             )}
           </li>
         ))}

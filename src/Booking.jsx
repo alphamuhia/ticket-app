@@ -485,7 +485,7 @@ const Booking = () => {
   return (
     <div className="container mx-auto p-4 bg-gray-100">
       <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
-        Movie Ticket Booking
+        Available Movie
       </h1>
 
       <button className="border border-gray-700 bg-blue-500 rounded fixed top-0 right-0">

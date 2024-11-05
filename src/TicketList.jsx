@@ -7,7 +7,7 @@ const TicketList = ({ tickets, onBook }) => {
       <ul>
         {tickets.map((ticket) => (
           <li key={ticket.id}>
-            {ticket.name} - ${ticket.price}
+            {ticket.name} - Ksh {ticket.price}
             <button onClick={() => onBook(ticket)}>Book</button>
           </li>
         ))}

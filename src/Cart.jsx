@@ -15,7 +15,7 @@ const Checkout = ({ cart, handleConfirm, handleRemoveFromCart }) => {
                 className="text-lg flex justify-between items-center mb-2"
               >
                 <span>
-                  {ticket.name} - ${ticket.price}
+                  {ticket.name} - Ksh {ticket.price}
                 </span>
                 <button
                   onClick={() => handleRemoveFromCart(ticket.id)}
@@ -26,7 +26,7 @@ const Checkout = ({ cart, handleConfirm, handleRemoveFromCart }) => {
               </li>
             ))}
           </ul>
-          <p className="text-lg font-semibold mt-4">Total: ${totalPrice}</p>
+          <p className="text-lg font-semibold mt-4">Total: Ksh {totalPrice}</p>
           <button
             onClick={handleConfirm}
             className="mt-4 bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600 transition duration-200"
