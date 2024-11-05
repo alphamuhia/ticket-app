@@ -6,10 +6,19 @@ function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+
+  {/* Desktop Menu */}
+  <div className="hidden md:flex space-x-6">
+    <NavLink to="/" className="hover:text-gray-200">Home</NavLink>
+    <NavLink to="/events" className="hover:text-gray-200">Movies</NavLink>
+    <NavLink to="/contact" className="hover:text-gray-200">Contact</NavLink>
+  
+  </div>
   return (
     <nav className="bg-black text-white">
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
-        {/* Logo */}
+        
+
 
         <NavLink to="/" className="text-2xl font-bold">
           TicketMaster
