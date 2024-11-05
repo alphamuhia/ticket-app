@@ -1,4 +1,34 @@
 // components/EventList.js
+
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import die from '../images/die.jpg';
+import dis from '../images/dis.jpg';
+import dog from '../images/dog.jpg';
+import dune from '../images/dune.jpeg';
+import et from '../images/et.jpg';
+import ghost from '../images/ghost.jpeg';
+import mat from '../images/mat.jpeg';
+import spider from '../images/spider.jpeg';
+import venom from '../images/thumb-1920-1364834.png';
+import west from '../images/west.jpg';
+
+const mockEvents = [
+  { id: 1, name: "Venom 3", date: "Friday 15 Oct 2024", location: "Cinema Hall 1", category: "Sci-Fi", image: venom },
+  { id: 2, name: "No Time to Die", date: "Friday 29 Nov 2024", location: "Cinema Hall 2", category: "Action", image: die },
+  { id: 3, name: "The French Dispatch", date: "Saturday 30 Nov 2024", location: "Cinema Hall 3", category: "Comedy", image: dis },
+  { id: 4, name: "Eternals", date: "Saturday 09 Nov 2024", location: "Cinema Hall 4", category: "Adventure", image: et },
+  { id: 5, name: "The Matrix Resurrections", date: "Sunday 10 Nov 2024", location: "Cinema Hall 5", category: "Sci-Fi", image:mat },
+  { id: 6, name: "West Side Story", date: "Thursday 19 Dec 2024", location: "Cinema Hall 6", category: "Musical", image: west },
+  { id: 7, name: "Spider-Man: No Way Home", date: "Saturday 09 Nov 2024", location: "Cinema Hall 7", category: "Action", image: spider },
+  { id: 8, name: "Ghostbusters: Afterlife", date: "Saturday 02 Nov 2024", location: "Cinema Hall 8", category: "Comedy", image: ghost },
+  { id: 9, name: "The Power of the Dog", date: "Monday December 30th", location: "Cinema Hall 9", category: "Drama", image: dog },
+  { id: 10, name: "Dune: Part Two", date: "Friday December 06 2024", location: "Cinema Hall 10", category: "Sci-Fi", image:dune },
+  // ... add more movies as needed
+];
+
+  const categories = ["All", "Action", "Comedy", "Drama", "Sci-Fi", "Adventure", "Musical"];
+
 import React, { useState, useEffect } from "react";
 import mod from "../images/mod.jpeg";
 import soiree from "../images/soiree.jpeg";
@@ -105,6 +135,7 @@ const categories = [
   "Music",
 ];
 
+
 const EventList = () => {
   const [filteredEvents, setFilteredEvents] = useState(mockEvents);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -122,15 +153,20 @@ const EventList = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 bg-gray-100">
+
+      <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">Discover Movies</h1>
+      
+
       <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
         Discover Events
       </h1>
+
 
       <div className="mb-8 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         <div className="w-full md:w-1/3">
           <input
             type="text"
-            placeholder="Search events..."
+            placeholder="Search Movies..."
             className="w-full px-4 py-2 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-300"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
